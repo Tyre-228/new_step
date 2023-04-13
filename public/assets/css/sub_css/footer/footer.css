@@ -1,0 +1,111 @@
+.footer {
+  width: 100%;
+  height: 100px;
+  background-color: #1d1d1d;
+}
+
+@media (max-width: 420px) {
+  .footer {
+    height: 80px;
+  }
+}
+.footer {
+  animation-duration: 400ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  position: fixed;
+}
+.footer#top {
+  animation-name: sideBarTop;
+  top: 0;
+  border-bottom: 2px solid black;
+}
+.footer#bottom {
+  animation-name: sideBarBottom;
+  bottom: 0;
+  border-top: 2px solid black;
+}
+
+.footer__options {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.footer__options > .options__item {
+  margin-top: auto;
+  margin-bottom: auto;
+  border-radius: 20%;
+  background-color: #3B3B3B;
+  height: 80%;
+  width: 80px;
+  position: relative;
+  transition: 200ms all;
+  border: 2px solid #3B3B3B;
+}
+.footer__options > .options__item:not(:last-child) {
+  margin-right: 5%;
+}
+.footer__options > .options__item > .material-symbols-outlined {
+  font-size: 58px;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  transition: 200ms all;
+}
+@media (hover: hover) {
+  .footer__options > .options__item > .material-symbols-outlined:hover {
+    transition: 200ms all;
+    color: #5c3c92;
+  }
+}
+.footer__options > .options__item:active, .footer__options > .options__item#current {
+  transition: 200ms all;
+  border: 3px solid black;
+  transform: scale(1.05);
+}
+.footer__options > .options__item:active > .material-symbols-outlined, .footer__options > .options__item#current > .material-symbols-outlined {
+  transition: 200ms all;
+  color: #5c3c92;
+  font-size: 64px;
+}
+
+@media (max-width: 420px) {
+  .footer__options > .options__item {
+    width: 64px;
+  }
+  .footer__options > .options__item > .material-symbols-outlined {
+    font-size: 51.2px;
+  }
+  .footer__options > .options__item:active, .footer__options > .options__item#current {
+    transition: 400ms all;
+    border: 3px solid black;
+    transform: scale(1.05);
+  }
+  .footer__options > .options__item:active > .material-symbols-outlined, .footer__options > .options__item#current > .material-symbols-outlined {
+    transition: 400ms all;
+    color: #5c3c92;
+    font-size: 56px;
+  }
+}
+@keyframes sideBarTop {
+  0% {
+    top: -200px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+@keyframes sideBarBottom {
+  0% {
+    bottom: -200px;
+  }
+  100% {
+    bottom: 0px;
+  }
+}/*# sourceMappingURL=footer.css.map */

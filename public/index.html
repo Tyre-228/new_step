@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/sub_css/preloader/preloader.css">
+
+    <!-- Google_fonts_connector -->
+    <link rel="preconnect" href="https://fonts.gstatic.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link as="font" href="https://fonts.googleapis.com/css?family=Muli:400" rel="stylesheet"/>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" crossorigin href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <!-- Google_fonts_connector -->
+</head>
+<body>
+    <section class="preloader">
+        <div class="preloader__image">
+            <span id = "loading" class="material-symbols-outlined">hourglass_top</span>
+        </div>
+    </section>
+
+    <link rel="stylesheet" href="./assets/css/sub_css/cleaner/cleaner.css">
+
+    <section class="authorization">
+        <div class="sign-in">
+            <h2 class="sign-in__title">SIGN IN</h2>
+            <form class = "sign-in__form form">
+                <input type="text" placeholder = "Insert nickname" class="sign-in__insert-name insert-name" autofocus>
+                <input type="password" placeholder = "Insert password" class="sign-in__insert-password insert-password">
+                <button class="sign-in__submit submit">enter</button>
+            </form>
+            <p class="create-account">Create new account <span  id = "go-to-sign-up" href = "#">here</span></p>
+        </div>
+        <div style="display: none;" class="sign-up">
+            <h2 class="sign-up__title">SIGN UP</h2>
+            <form class = "sign-up__form form">
+                <input type="text" placeholder = "Create nickname" class="sign-up__insert-name insert-name" autofocus>
+                <input type="password"  placeholder = "Create password" class="sign-up__insert-password insert-password">
+                <button class="sign-up__submit submit">create</button>
+            </form>
+            <p class="enter-account">To enter in exist account click <span  id = "go-to-sign-in" href = "#">here</span></p>
+        </div>
+    </section>
+
+    <wrapper style="display: none;" class="wrapper">
+        <header class="header">
+            <h1 class = "header__title title">NOTEPAD</h1>
+        </header>
+        <main class="main">
+            <section switchTarget = "note-creator" id = "page" class="create-note-page create-note">
+                <div class="create-note__content">
+                    <h2 class="create-note__title">CREATE NEW NOTE</h2>
+                    <div class="create-note__type-selector">
+                            <p>Choose type of note</p>
+                            <select>
+                                <option value="task">Task</option>
+                                <option value="list">List</option>
+                                <option value="date">Date</option>
+                                <option value="idea">Idea</option>
+                            </select>
+                    </div>
+                    <ul class="create-note__parameters note-parameners">
+                        <li id = "task" class="note-parameters__item">
+                            <input placeholder = "Task" type="text">
+                            <input placeholder = "Deadline" type="text">
+                            <button submit-table = "tasks"  class="create-note-button">Create note</button>
+                        </li>
+                        <li id = "list" class="note-parameters__item">
+                            <input class = "list__name" placeholder = "List name" type="text">
+                            <div class = "list__item">
+                                <input placeholder = "Task" type="text">
+                                <button class="delete-list-item"><span class="material-symbols-outlined">close</span></button>
+                            </div>
+                            <button class="list__add">+</button>
+                            <button submit-table = "lists"  class="create-note-button">Create note</button>
+                        </li>
+                        <li id = "date" class="note-parameters__item">
+                            <input placeholder = "Event" type="text">
+                            <input placeholder = "Date" type="date">
+                            <button submit-table = "dates"  class="create-note-button">Create note</button>
+                        </li>
+                        <li id = "idea" class="note-parameters__item">
+                            <input placeholder = "Idea title" type="text">
+                            <textarea placeholder = "Idea" type="text"></textarea>
+                            <button submit-table = "ideas"  class="create-note-button">Create note</button>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section switchTarget = "note-list" id = "page" class="notes-page">
+                <ul class="notes">
+                    <li note-type = "task" class="note-type__item_tasks note-type__item nt-item">
+                        <div class="nt-item__description">
+                            <button class="open-list-button"><span class="material-symbols-outlined">menu_open</span></button>
+                            <div class="notes__info">
+                                <h2 class="nt-item__title title">Tasks</h2>
+                                <p class="nt-item__description">
+                                    Description: writing down your tasks can help to remember 
+                                    all your plans and make it easier to achieve!
+                                </p>
+                            </div>
+                        </div>
+                        <div style = "display: none" class="nt-item__content">
+                            <button class = "add-note-button">
+                                <span class="material-symbols-outlined">add</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li note-type = "list" class="note-type__item_lists note-type__item nt-item">
+                        <div class="nt-item__description">
+                            <button class="open-list-button"><span class="material-symbols-outlined">menu_open</span></button>
+                            <div class="notes__info">
+                                <h2 class="nt-item__title title">Lists</h2>
+                                <p class="nt-item__description">
+                                    Description: go to shop, work out, make plans or timetable? 
+                                    Use lists to remember all this stuff and concentrate on more important things.
+                                </p>
+                            </div>
+                        </div>
+                        <div style = "display: none" class="nt-item__content">
+                            <button class = "add-note-button">
+                                <span class="material-symbols-outlined">add</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li note-type = "idea" class="note-type__item_ideas note-type__item nt-item">
+                        <div class="nt-item__description">
+                            <button class="open-list-button"><span class="material-symbols-outlined">menu_open</span></button>
+                            <div class="notes__info">
+                                <h2 class="nt-item__title title">Ideas</h2>
+                                <p class="nt-item__description">
+                                    Description: here you can write your ideas, opinions, concepts or even write own book. 
+                                    Also you can save text information from different sources here.
+                                </p>
+                            </div>
+                        </div>
+                        <div style = "display: none" class="nt-item__content">
+                            <button class = "add-note-button">
+                                <span class="material-symbols-outlined">add</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li note-type = "date" class="note-type__item_dates note-type__item nt-item">
+                        <div class="nt-item__description">
+                            <button class="open-list-button"><span class="material-symbols-outlined">menu_open</span></button>
+                            <div class="notes__info">
+                                <h2 class="nt-item__title title">Dates</h2>
+                                <p class="nt-item__description">
+                                    Description: if you always forget day of your anniversary use date notes. 
+                                    It is a good way to make as specifical notes as dates.
+                                </p>
+                            </div>
+                        </div>
+                        <div style = "display: none" class="nt-item__content">
+                            <button class = "add-note-button">
+                                <span class="material-symbols-outlined">add</span>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section switchTarget = "account" id = "page" class="account-page account">
+                <h2 class="account__title">Account</h2>
+                <form class = "account__form">
+                    <input disabled type="text" placeholder = "Insert nickname" class="account__insert-name insert-name" autofocus>
+                    <input disabled type="password" id = "password" placeholder = "Insert password" class="account__insert-password insert-password">
+                    <button class="account__change change">Change account</button>
+                </form>
+            </section>
+        </main>
+        <footer class="footer">
+            <ul class="options footer__options">
+                <li  id = "current" switchElem = "note-creator" option-type = "new-note" class="options__item">
+                    <span class="material-symbols-outlined">add</span>
+                </li>
+                <li switchElem = "note-list" option-type = "note-list" class="options__item">
+                    <span class="material-symbols-outlined">event_note</span>
+                </li>
+                <li switchElem = "account" option-type = "account" class="options__item">
+                    <span class="material-symbols-outlined">person</span>
+                </li>
+            </ul>
+        </footer>
+    </wrapper>
+
+    <link rel="stylesheet" href="./assets/css/main_css/style.css">
+    <script src="./assets/compiledJS/index.js"></script>
+</body>
+</html>
