@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denis Novik portfolio</title>
+    <link rel="icon" href="./images/denis_novik.png">
+    <link rel="stylesheet" href="./css/main/main.css">
+</head>
+<body>
+    <wrapper class="wrapper">
+        <header class="header">
+            <ul class="header__options options">
+                <li nav_data = "home" id = "ENG" class="options__item options__item_current">Home</li>
+                <li nav_data = "home" id = "RU" class="options__item options__item_current">Главная</li>
+                <li nav_data = "about" id = "ENG" class="options__item">About me</li>
+                <li nav_data = "about" id = "RU" class="options__item">Про меня</li>
+                <li nav_data = "skills" id = "ENG" class="options__item">Skills</li>
+                <li nav_data = "skills" id = "RU" class="options__item">Навики</li>
+                <li nav_data = "portfolio" id = "ENG" class="options__item">Portfolio</li>
+                <li nav_data = "portfolio" id = "RU" class="options__item">Портфолио</li>
+                <li nav_data = "contacts" id = "ENG" class="options__item">Contacts</li>
+                <li nav_data = "contacts" id = "RU" class="options__item">Контакти</li>
+            </ul>
+            <div class="header__burger-menu burger-menu">
+                <button class="burger-menu__open">
+                    <img src="./images/burger_menu_open.svg">
+                </button>
+                <div class="burger-menu__content">
+                    <ul class="burger-menu__options options">
+                        <li nav_data = "home" id = "ENG" class="burger-menu__options__item options__item_current">Home</li>
+                        <li nav_data = "home" id = "RU" class="burger-menu__options__item options__item_current">Главная</li>
+                        <li nav_data = "about" id = "ENG" class="burger-menu__options__item">About me</li>
+                        <li nav_data = "about" id = "RU" class="burger-menu__options__item">Про меня</li>
+                        <li nav_data = "skills" id = "ENG" class="burger-menu__options__item">Skills</li>
+                        <li nav_data = "skills" id = "RU" class="burger-menu__options__item">Навики</li>
+                        <li nav_data = "portfolio" id = "ENG" class="burger-menu__options__item">Portfolio</li>
+                        <li nav_data = "portfolio" id = "RU" class="burger-menu__options__item">Портфолио</li>
+                        <li nav_data = "contacts" id = "ENG" class="burger-menu__options__item">Contacts</li>
+                        <li nav_data = "contacts" id = "RU" class="burger-menu__options__item">Контакти</li>
+                    </ul>
+                    <button class="burger-menu__close">
+                        <img src="./images/burger-menu_close.svg">
+                    </button>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <section id = "nav_target" nav_target = "home" class="introduction">
+                <div class="introduction__description">
+                    <div class="introduction__text">
+                        <h2 class="inroduction__title">
+                            <span id = "ENG">Denis</span>
+                            <span id = "RU">Денис</span>
+                            <span id = "ENG">Novik</span>
+                            <span id = "RU">Новик</span>
+                        </h2>
+                        <p class="introduction__subtitle">
+                            <span id = "ENG">UX | UI designer </span>
+                            <span id = "RU">UX | UI дизайнер </span>
+                            <span id = "ENG">24 years old, Minsk</span>
+                            <span id = "RU">24 года, Минск</span>
+                        </p>
+                    </div>
+                    <h3 class="introdunction__language">
+                        <a class = "RU">RU</a>
+                        <a id = "current" class = "ENG">| ENG</a>
+                    </h3>
+                </div>
+                <div class="introduction__image">
+                    <img src="./images/denis_novik.png">
+                </div>
+            </section>
+            <section id = "nav_target" nav_target = "about" class="description">
+                <h2 id = "ENG" class="description__title">About me</h2>
+                <h2 id = "RU" class="description__title">Про меня</h2>
+                <p id = "ENG" class="description__text">
+                    <span>Hi, I'm Denis – UX/UI designer from Minsk. I'm interested in design and everything connected with it.</span>
+                    <span>I'm studying at courses "Web and mobile design interfaces" in IT-Academy.</span>
+                    <span>Ready to implement excellent projects with wonderful people.</span>
+                </p>
+                <p id = "RU" class="description__text">
+                    <span>Привет, я Денис — UX/UI дизайнер из Минска. Интересуюсь дизайном и всем, что с ним связано.</span>
+                    <span>Я учусь на курсах "Веб и мобильный дизайн интерфейсов" в IT-Академии.</span>
+                    <span>Готовы реализовать отличные проекты с замечательными людьми.</span>
+                </p>
+            </section>
+            <section id = "nav_target" nav_target = "skills" class="skills">
+                <h2 id = "ENG" class="skills__title">Skills</h2>
+                <h2 id = "RU" class="skills__title">Навики</h2>
+                <p id = "ENG" class="skills__subtitle">I work in such programs as</p>
+                <p id = "RU" class="skills__subtitle">Я работаю в таких програмах как</p>
+                <ul class="skills__options">
+                    <li class="skills__item program">
+                        <div class="program__image">
+                            <img src="./images/adobe_photoshop.svg" alt="Adobe Photoshop">
+                        </div>
+                        <p class="program__text">Adobe Photoshop</p>
+                        <div class="program__strar-rate">
+                            <div id = "black" class="program__star star">
+                                <img src="./images/star_black.svg">
+                            </div>
+                            <div id = "black" class="program__star star">
+                                <img src="./images/star_black.svg">
+                            </div>
+                            <div id = "black" class="program__star star">
+                                <img src="./images/star_black.svg">
+                            </div>
+                            <div id = "black" class="program__star star">
+                                <img src="./images/star_black.svg">
+                            </div>
+                            <div id = "white" class="program__star star">
+                                <img src="./images/star_white.svg">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="skills__item program">
+                        <div class="program__image">
+                            <img src="./images/adobe_illustrator.svg" alt="Adobe Illustrator">
+                        </div>
+                        <p class="program__text">Adobe Illustrator</p>
+                        <div class="program__strar-rate">
+                            <div id = "black" class="program__star star">
+                                <img src="./images/star_black.svg">
+                            </div>
+                            <div id = "black" class="program__star star">
+                                <img src="./images/star_black.svg">
+                            </div>
+                            <div id = "black" class="program__star star">
+                                <img src="./images/star_black.svg">
+                            </div>
+                            <div id = "white" class="program__star star">
+                                <img src="./images/star_white.svg">
+                            </div>
+                            <div id = "white" class="program__star star">
+                                <img src="./images/star_white.svg">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="skills__item program">
+                        <div class="program__image">
+                            <img src="./images/adobe_after_effects.svg" alt="Adobe After Effects">
+                        </div>
+                        <p class="program__text">Adobe After Effects</p>
+                        <div class="program__strar-rate">
+                            <div id = "black" class="program__star star">
+                                <img src="./images/star_black.svg">
+                            </div>
+                            <div id = "black" class="program__star star">
+                                <img src="./images/star_black.svg">
+                            </div>
+                            <div id = "black" class="program__star star">
+                                <img src="./images/star_black.svg">
+                            </div>
+                            <div id = "black" class="program__star star">
+                                <img src="./images/star_black.svg">
+                            </div>
+                            <div id = "white" class="program__star star">
+                                <img src="./images/star_white.svg">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="skills__item program">
+                        <div class="program__image">
+                            <img src="./images/figma.svg" alt="Figma">
+                        </div>
+                        <p class="program__text">Figma</p>
+                        <div class="program__strar-rate">
+                            <div id = "black" class="program__star star">
+                                <img src="./images/star_black.svg">
+                            </div>
+                            <div id = "black" class="program__star star">
+                                <img src="./images/star_black.svg">
+                            </div>
+                            <div id = "black" class="program__star star">
+                                <img src="./images/star_black.svg">
+                            </div>
+                            <div id = "black" class="program__star star">
+                                <img src="./images/star_black.svg">
+                            </div>
+                            <div id = "white" class="program__star star">
+                                <img src="./images/star_white.svg">
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section id = "nav_target" nav_target = "portfolio" class="portfolio">
+                <h2 id = "ENG" class="portfolio__title">Portfolio</h2>
+                <h2 id = "RU" class="portfolio__title">Портфолио</h2>
+                <div class="portfolio__content">
+                    <ul class="portfolio-list">
+                        <li class="portfolio__item work">
+                            <div class="work__image">
+                                <img src="./images/online_fashion_store_homepage.png">
+                            </div>
+                            <a class="work__link">Online fashion store - Homepage</a>
+                        </li>
+                        <li class="portfolio__item work">
+                            <div class="work__image">
+                                <img src="./images/reebok_store_concept.png">
+                            </div>
+                            <a class="work__link">Online fashion store - Homepage</a>
+                        </li>
+                        <li class="portfolio__item work">
+                            <div class="work__image">
+                                <img src="./images/braun_landing_page_concept.png">
+                            </div>
+                            <a class="work__link">Braun Landing Page - Concept</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+        <footer id = "nav_target" nav_target = "contacts" class="footer">
+            <div class="footer__content">
+                <h2 id = "ENG" class="footer__title">Contacts</h2>
+                <h2 id = "RU" class="footer__title">Контакти</h2>
+                <p id = "ENG" class="footer__text">Want to know more or just chat? You are welcome!</p>
+                <p id = "RU" class="footer__text">Хотите узнать больше или просто поболтать? Пожалуйста!</p>
+                <button id = "ENG" class="footer__send-message send-message">Send message</button>
+                <button id = "RU" class="footer__send-message send-message">Отослать сообщение</button>
+                <div class="footer__social-media social-media">
+                    <img src="./images/linked_in_logo.svg" alt="LinkedIn logo">
+                    <img src="./images/instagram_logo.svg" alt="Instagram logo">
+                    <img src="./images/behance_logo.svg" alt="Behance logo">
+                    <img src="./images/dribble_logo.svg" alt="Dribble logo">
+                </div>
+                <p id = "ENG" class="social-media__text">Like me on LinkedIn, Instagram, Behance, Dribble</p>
+                <p id = "RU" class="social-media__text">Лайкните меня на LinkedIn, Instagram, Behance, Dribble</p>
+            </div>
+        </footer>
+    </wrapper>
+    <script src="./index.js"></script>
+</body>
+</html>
