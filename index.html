@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kion</title>
+    <link rel="icon" href="./images/logo-image.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main/style.css">
+</head>
+<body>
+    <wrapper class = "wrapper">
+        <header class = "header">
+            <div class="header__logo logo">
+                <img src="./images/logo-text.svg">
+            </div>
+            <div class="header__content">
+                <ul class="options header__options">
+                    <li class="options__item"><a href = "#">Product</a></li>
+                    <li class="options__item"><a href = "#">Resources</a></li>
+                    <li class="options__item"><a href = "#">Support</a></li>
+                    <li class="options__item"><a href = "#">About</a></li>
+                </ul>
+                <div class="tools header__tools">
+                    <div class="find tools__find">
+                        <img src="./images/find.svg">
+                    </div>
+                    <button class="schedule-demo tools__schedule-demo">Schedule Demo</button>
+                </div>
+            </div>
+            <div id = "closed" class="header__burger-menu burger-menu">
+                <div class="closed-menu">
+                    <button class = "open-menu-button"><img src="./images/burger-menu-open.svg"></button>
+                </div>
+                <div class="opened-menu">
+                    <button class = "close-menu-button"></button>
+                    <div class="opened-menu__content">
+                        <ul class="burger-menu__options options">
+                            <li class="options__item"><a href="#">Product</a></li>
+                            <li class="options__item"><a href="#">Resources</a></li>
+                            <li class="options__item"><a href="#">Support</a></li>
+                            <li class="options__item"><a href="#">About</a></li>
+                        </ul>
+                        <ul class="burger-menu__tools tools">
+                            <button class="schedule-demo tools__schedule-demo">Schedule Demo</button>
+                            <div class="find tools__find">
+                                <img src="./images/find.svg">
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <section class="demo">
+                <div class="demo__description">
+                    <h2 class="demo__title">Complete cloud enablement has arrived.</h2>
+                    <p class="demo__text">Oversee, secure, and scale your cloud with one solution.</p>
+                    <button class = "demo__button">Request Demo</button>
+                </div>
+                <div class="demo__images">
+                    <img class = "demo-images__image" src="./images/financial_managemant.jpg">
+                    <img class = "demo-images__image" src="./images/automatiosation & orchestrationjpg.jpg">
+                    <img class = "demo-images__image" src="./images/continuous_compliance.jpg">
+                </div>
+                <ul class="demo__resourses">
+                    <li class = "demo__item"><img src="./images/nasa-logo.svg"></li>
+                    <li class = "demo__item"><img src="./images/absolute-logo.svg"></li>
+                    <li class = "demo__item"><img src="./images/cdc-logo.svg"></li>
+                    <li class = "demo__item"><img src="./images/indeed.svg"></li>
+                    <li class = "demo__item"><img src="./images/verizon-logo.svg"></li>
+                </ul>
+            </section>
+            <section class="product">
+                <div class="product__description">
+                    <h2 class="product__title">The Product</h2>
+                    <p class="product__text">
+                        Kion offers the only single platform approach to <span href = "#">cloud enablement</span>,
+                        transcending cloud management and cloud governance by offering all 
+                        three pillars necessary for total cloud control.
+                    </p>
+                    <button>More About the Product</button>
+                </div>
+                <div class="product__card card">
+                    <div class="card__image">
+                        <img src="./images/automatization_image.png">
+                    </div>
+                    <h2 class="card__title">Automation & Orchestration</h2>
+                    <p class="card__text">
+                        Provision accounts, get enterprise-wide visibility,
+                        and fully integrate the cloud with your tech stack 
+                        to automate the full cloud lifecycle.
+                    </p>
+                    <button class="card__more-info more-info">Learn More</button>
+                </div>
+            </section>
+            <section class="results">
+                <h2 class="results__title">Our Results</h2>
+                <div class="results__content">
+                    <div class="result">
+                        <h3 class="result__title">10x</h3>
+                        <p class="result__text">Faster cloud account setup and provisioning</p>
+                    </div>
+                    <div class="result">
+                        <h3 class="result__title">30%</h3>
+                        <p class="result__text">Savings, on average, in cloud bills</p>
+                    </div>
+                    <div class="result">
+                        <h3 class="result__title">4,000+</h3>
+                        <p class="result__text">One-click resources to automate compliance and security</p>
+                    </div>
+                </div>
+            </section>
+            <section class="project-difference difference">
+                <div class="difference__description">
+                    <h2 class="difference__title">The Kion Difference</h2>
+                    <p class="difference__text">
+                        We deliver more than just the features to manage and govern your cloud.
+                        Kion gives you a comprehensive solution for your cloud to enable your 
+                        organization to achieve more.
+                    </p>
+                    <div class="difference__list list">
+                        <h3 class="list__title">our differences</h3>
+                        <ul>
+                            <li class="list__item">Cloud-native access</li>
+                            <li class="list__item">A private, self-hosted architecture</li>
+                            <li class="list__item">Multi-cloud control</li>
+                            <li class="list__item">A single, intuitive interface</li>
+                        </ul>
+                    </div>
+                    <button class="difference__more-info more-info">Learn More</button>
+                </div>
+                <div class="difference__video">
+                    <video id = "video" src="./videoes/videoplayback.mp4" poster="./images/video-preload.png"></video>
+                    <button class="start-video__button"></button>
+                </div>
+            </section>
+            <section class="platforms">
+                <h2 class="platforms__title">Built For</h2>
+                <ul class="platforms__content">
+                    <li class="platforms__item">
+                        <img src="./images/azure-logo.svg" alt="Azure">
+                    </li>
+                    <li class="platforms__item">
+                        <img src="./images/avs-logo.svg" alt="AWS">
+                    </li>
+                    <li class="platforms__item">
+                        <img src="./images/google_cloud-logo.svg" alt="Google cloud">
+                    </li>
+                </ul>
+            </section>
+            <section class="request-demo">
+                <h2 class="request-demo__title">Start your cloud enablement journey.</h2>
+                <p class="request-demo__subtitle">Request a demo today,</p>
+                <button class="request-demo__button">Request Demo</button>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer__body">
+                <div class="footer__product">
+                    <h2>Our Product</h2>
+                    <ul class="product__management product-management">
+                        <li class = "product-management__item"><p>Product Overview</p></li>
+                        <li class = "product-management__item"><p>Automation & Orchestration</p></li>
+                        <li class = "product-management__item"><p>Financial Management</p></li>
+                        <li class = "product-management__item"><p>Continuous Compliance</p></li>
+                    </ul>
+                    <ul class="product__get product-get">
+                        <li class = "product-get__item"><p>Integrations</p></li>
+                        <li class = "product-get__item"><p>Request a Demo</p></li>
+                        <li class = "product-get__item"><p>Try Kion For Free</p></li>
+                    </ul>
+                    <button class="footer__schedule-demo schedule-demo">Schedule Demo</button>
+                </div>
+                <div class="footer__customers">
+                    <ul class="footer__resourses resourses">
+                        <li class = "resourses__item"><h2>Resources</h2></li>
+                        <li class = "resourses__item"><p>All Resources</p></li>
+                        <li class = "resourses__item"><p>Blog</p></li>
+                        <li class = "resourses__item"><p>Case Studies</p></li>
+                    </ul>
+                    <ul class="footer__support support">
+                        <li class = "support__item"><h2>Support</h2></li>
+                        <li class = "support__item"><p>Support Overview</p></li>
+                        <li class = "support__item"><p>FAQs</p></li>
+                    </ul>
+                    <ul class="footer__about about">
+                        <li class = "about__item"><h2>About</h2></li>
+                        <li class = "about__item"><p>About Us</p></li>
+                        <li class = "about__item"><p>Careers</p></li>
+                        <li class = "about__item"><p>Contact</p></li>
+                    </ul>
+                    <div class="footer__sign-up sign-up">
+                        <h2>Sign up for our monthly newsletter</h2>
+                        <div class="footer__insert">
+                            <input placeholder = "Email*" type="text">
+                            <button class="subscribe-button">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__logo logo"></div>
+            </div>
+            <div class="footer__footer">
+                <ul class="footer__social-media social-media">
+                    <li class = "social-media__item"><img src="./images/social-media/twiter.svg"></li>
+                    <li class = "social-media__item"><img src="./images/social-media/facebook.svg"></li>
+                    <li class = "social-media__item"><img src="./images/social-media/indeed.svg"></li>
+                    <li class = "social-media__item"><img src="./images/social-media/instargam.svg"></li>
+                </ul>
+                <ul class="footer__privacy privary">
+                    <li class = "privacy__item"><a href="#">License Agreement</a></li>
+                    <li class = "privacy__item"><a href="#">Privacy Policy</a></li>
+                </ul>
+                <div class="footer__brend brend"><p>Copyright © 2021 Nor Labs, Inc. All rights reserved.</p></div>
+            </div>
+        </footer>
+    </wrapper>
+    <script src="index.js"></script>
+</body>
+</html>
