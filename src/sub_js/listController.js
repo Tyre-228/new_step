@@ -6,11 +6,9 @@ const listController = () => {
         let taskElem = document.createElement("div")
 
         taskElem.className = "list__item"
-        taskElem.setAttribute("type", "text")
-        taskElem.setAttribute("placeholder", "Task")
         taskElem.innerHTML = 
         `
-        <input placeholder = "Task" type="text">
+        <input placeholder = "List item" type="text">
         <button class="delete-list-item"><span class="material-symbols-outlined">close</span></button>
         `
         

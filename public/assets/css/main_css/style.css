@@ -425,6 +425,7 @@ body {
 }
 .note-list > .note-list__item > .note-list__content > p {
   overflow-wrap: break-word;
+  white-space: break-spaces;
 }
 .note-list > .note-list__item > button {
   width: 10%;
@@ -609,11 +610,13 @@ body {
   margin-bottom: 2%;
 }
 .note-parameters__item > textarea {
-  height: 20svw;
+  padding: 5px;
+  height: 20vw;
   min-height: 200px;
   max-height: -moz-fit-content;
   max-height: fit-content;
   width: 100%;
+  white-space: break-spaces;
 }
 .note-parameters__item > input, .note-parameters__item > div {
   width: 60%;

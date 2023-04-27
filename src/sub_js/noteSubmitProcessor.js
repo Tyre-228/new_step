@@ -111,7 +111,7 @@ const noteSubmitProcessor = () => {
                             return elem.value.trim()
                         }), listItemsStringifier()]
                     } else {
-                        dataArray = inputs.map(elem => elem.value.trim())
+                        dataArray = inputs.map(elem => elem.value)
                     }
                     try {
                         dataSubmiter(button.getAttribute("submit-table"), dataArray)
