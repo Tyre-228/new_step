@@ -158,10 +158,10 @@ const autorizationProcessor = () => {
                                 createAccountButton.after(errorCreator("Something went wrong").error)
                             }
                         } else {
-                            createPasswordInput.after(errorCreator("This password is already exist").error)
+                            createPasswordInput.after(errorCreator("This password do already exist").error)
                         }
                     } else {
-                        createNicknameInput.after(errorCreator("This nickname is already exist").error)
+                        createNicknameInput.after(errorCreator("This nickname do already exist").error)
                     } 
                 }
             }
@@ -198,7 +198,7 @@ const autorizationProcessor = () => {
                             enterPasswordInput.after(errorCreator("This password is not correct").error)
                         }
                     } else {
-                        enterNicknameInput.after(errorCreator("This nickname is not exist").error)
+                        enterNicknameInput.after(errorCreator("This nickname do not exist").error)
                     }
                 }
             }
