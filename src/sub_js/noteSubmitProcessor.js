@@ -7,6 +7,7 @@ const noteSubmitProcessor = () => {
     const dataSubmiter = (table, dataArray) => {
         databaseProcessor(table).add(localStorage.getItem("user_id"), dataArray[0], dataArray[1])
     }
+    //Submit data to database. Receive DB table, and data array
     const inputCleaner = formElem => {
         let formChildren = formElem.children
         
@@ -19,6 +20,7 @@ const noteSubmitProcessor = () => {
             }
         })
     }
+    //Clean all inputs inside of received form element
 
     const listCleaner = formElem => {
         let formChildren = formElem.children
@@ -43,6 +45,7 @@ const noteSubmitProcessor = () => {
             }
         }
     }
+    //Clean inputs in list form
 
     const errorChecker = (inputElements) => {
         let errors = false
@@ -62,6 +65,7 @@ const noteSubmitProcessor = () => {
         }
         return {errors}
     }
+    //Checking for existing data in form. Return error method(true/false)
 
     const eventListenerSetter = () => {
         let formsParentElem = document.querySelector(".create-note__parameters")
@@ -85,6 +89,7 @@ const noteSubmitProcessor = () => {
                         }
                     }
                 }
+                //Adding input/textarea elements to inputElements variable
 
                 const listItemsStringifier = () => {
                     let result
@@ -96,16 +101,13 @@ const noteSubmitProcessor = () => {
                     result = JSON.stringify(listItemInputArray)
                     return result
                 }
+                //Stringify list to set it in database
 
                 errorCleaner(`.${form.className}`)
 
                 if(errorChecker(inputElements).errors == false) {
                     let dataArray = []
-                    let inputs = inputElements.filter(elem => {
-                        if(elem.parentElement.className != "list__item") {
-                            return true
-                        }
-                    })
+                    let inputs = inputElements.filter(elem => {return elem.parentElement.className != "list__item" ? true : false})
                     if(button.getAttribute("submit-table") == "lists") {
                         dataArray = [...inputs.map(elem => {
                             return elem.value.trim()
@@ -122,6 +124,7 @@ const noteSubmitProcessor = () => {
                         button.after(errorCreator("Something went wrong, reload the page").error)
                     }
                 }
+                //Checking for errors and submitting data with calling all necessary functions.
             }
         })
     }

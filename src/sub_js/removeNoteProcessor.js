@@ -8,6 +8,7 @@ const removeNoteProcessor = () => {
         }
         return {content}
     }
+    //Checking for content in note section
     const eventListenerSetter = () => {
         let notesElement = document.querySelector(".notes")
         notesElement.addEventListener("click", event => {
@@ -25,6 +26,7 @@ const removeNoteProcessor = () => {
             }
         })
     }
+    //Setting event listeners to all buttons which allow to delete note
     return {
         setEventListener: eventListenerSetter,
     }

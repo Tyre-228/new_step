@@ -9,6 +9,7 @@ const preloaderProcessor = async (state) => {
         preloaderElem.id = ""
         preloaderImage.id = "loading"
     }
+    //Showing of preloader
     const preloaderDestroyer = () => {
         preloaderImage.id = "loaded"
         preloaderElem.id = "loaded"
@@ -19,12 +20,14 @@ const preloaderProcessor = async (state) => {
                 resolve()
             }, 1900)
         })
+        //Setting timeout for playing animaiton before hiding preloader
     }
     const destroyerDelay = (delay) => {
         return new Promise(resolve => {
             setTimeout(() => {resolve()}, delay)
         })
     }
+    //Delay before hiding preloader
     
     if(state == "start") {
         preloaderCreator()

@@ -8,4 +8,5 @@ const spaceChecker = (string) => {
     })
     return {sucess}
 }
+//Receive string and check it for spaces between words. Has method sucess which give true/false according to checking results
 export default spaceChecker

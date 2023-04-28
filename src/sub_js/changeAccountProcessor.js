@@ -10,6 +10,7 @@ const changeAccountProcessor = () => {
         await showNotesProcessor().setNote()
         await preloaderProcessor("end")
     }
+    //Activate preloader and rewrite all data according to account
     const authorizationFinishChecker = () => {
         let authorizationElem = document.querySelector(".authorization")
         setTimeout(() => {
@@ -20,6 +21,7 @@ const changeAccountProcessor = () => {
             }
         }, 200)
     }
+    //Wait for authorization finishing
     const eventListenerSetter = () => {
         let changeAccountButton = document.querySelector(".account__form > .account__change")
         let wrapperElem = document.querySelector(".wrapper")
@@ -31,6 +33,7 @@ const changeAccountProcessor = () => {
             authorizationFinishChecker()
         })
     }
+    //Set event listener to change account button. After pressing button app move user to authorization form
 
     return {
         setEventListener: eventListenerSetter,

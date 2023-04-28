@@ -1,5 +1,5 @@
 const listController = () => {
-    let addListTaskElem = document.querySelector(".list__add")
+    let addListItemElem = document.querySelector(".list__add")
     let listElem = document.querySelector("#list.note-parameters__item")
 
     const itemCreator = () => {
@@ -14,6 +14,7 @@ const listController = () => {
         
         return taskElem
     }
+    //Create list input and return HTML element
 
     const itemDeleter = () => {
         let allListItems = document.querySelectorAll(".note-parameters__item .list__item")
@@ -25,23 +26,25 @@ const listController = () => {
             }
         }
     }
+    //Delete list input
 
     const listItemCounter = () => {
         let listItemElements = document.querySelectorAll(".list__item")
         return listItemElements.length
     }
+    //Count list inputs and return result
 
     const eventListenerSetter = () => {
-        addListTaskElem.addEventListener("click", event => {
+        addListItemElem.addEventListener("click", event => {
             event.preventDefault()
-            addListTaskElem.before(itemCreator())
+            addListItemElem.before(itemCreator())
         })
-
         listElem.addEventListener("click", event => {
             event.preventDefault()
             itemDeleter()
         })
     }
+    //Set event listener to inputs
 
     return {
         setEventListener: eventListenerSetter,

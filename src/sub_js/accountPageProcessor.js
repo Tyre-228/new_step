@@ -10,3 +10,4 @@ export const currentDataSetter = async () => {
     passwordInput.value = userData.password
     passwordInput.setAttribute("type", "text")
 }
+//Set user data

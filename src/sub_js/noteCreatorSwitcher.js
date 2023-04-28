@@ -7,6 +7,7 @@ const noteCreatorSwitcher = () => {
             elem.style.display = "none"
         })
     }
+    //Clean all sections
 
     const switcher = (switchTo) => {
         elemCleaner()
@@ -20,12 +21,12 @@ const noteCreatorSwitcher = () => {
             }
         }
     }
+    //Clean types and switch either to chosen type or to selector value
 
     const eventListenerSetter = () => {
-        selectorElem.addEventListener("change", () => {
-            switcher()
-        })
+        selectorElem.addEventListener("change", () => {switcher()})
     }
+    //Adding event listener to type selector
     return {
         switch: switcher,
         setEventListener: eventListenerSetter,

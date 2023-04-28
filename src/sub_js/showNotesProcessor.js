@@ -7,11 +7,12 @@ const showNotesProcessor = () => {
             let addNoteElem = document.createElement("button")
             addNoteElem.className = "add-note-button"
             addNoteElem.innerHTML = `<span class="material-symbols-outlined">add</span>`
-            
+            // Creating of button that allow to add new note
             let noteElem = document.createElement("ul")
             
             noteElem.className = "note-list"
             let data = await databaseProcessor(noteType).getById(localStorage.getItem("user_id"))
+
             const listHTMLCreator = (list) => {
                 let listElem = document.createElement("ol")
                 listElem.className = "note-item__list"
@@ -20,6 +21,7 @@ const showNotesProcessor = () => {
                 })
                 return listElem
             }
+            //Creating of HTML lists from accepted data(accept obly lists). Return HTML list.
 
             switch (noteType) {
                 case "tasks":
@@ -84,6 +86,7 @@ const showNotesProcessor = () => {
             }
             return `${noteElem.outerHTML}` + `${addNoteElem.outerHTML}`
     }
+    //getting data from database and transformang them in HTML. Return HTML of all notes of type
     const noteSetter = async () => {
         let noteListElements = document.querySelectorAll(".nt-item__content")
         for(let i = 0;i < noteListElements.length;i++) {
@@ -106,6 +109,7 @@ const showNotesProcessor = () => {
             }
         })
     }
+    // event listeners to open/close note lists
     return {
         setEventListener: eventListenerSetter,
         createNotes: noteCreator,

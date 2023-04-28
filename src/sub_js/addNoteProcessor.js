@@ -14,4 +14,5 @@ const addNoteProcessor = () => {
         }
     })
 }
+//Set event listener to add-note button. After pressing this button app move user to create note section with appropriate note type
 export default addNoteProcessor

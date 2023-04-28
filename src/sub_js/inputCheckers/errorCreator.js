@@ -5,5 +5,5 @@ const errorCreator = (text) => {
     
     return {error}
 }
-
+//Receive text and return error HTML element with this text
 export default errorCreator;

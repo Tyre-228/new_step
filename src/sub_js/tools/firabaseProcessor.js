@@ -17,10 +17,6 @@ const app = initializeApp(firebaseConfig);
 const database = getFirestore(app)
 
 const databaseProcessor = (table) => {
-  let defaultTable = "users"
-  if(!table) {
-    table = defaultTable
-  }
   let dbConf = collection(database, `${table}`)
 
   const addData = (data1 , data2, data3) => {
@@ -63,31 +59,34 @@ const databaseProcessor = (table) => {
         console.log("this table does not exist")
     }
   }
+  //Adding data to database, don`t check data for existing
   const removeData = (id) => {
       deleteDoc(doc(database, table, id))
   }
+  //Delete data by ID
   const getData = async () => {
-    let object
+    let data
     if(table == "users") {
       await getDocs(dbConf).then((response) => {
-        object =  response.docs.map(item => {
+        data =  response.docs.map(item => {
           return {...item.data(), id: item.id}
         })
       })
     } else {
-      object = new Promise(resolve => {
+      data = new Promise(resolve => {
         onSnapshot(dbConf,  response => {
-            object = response.docs.map(item => {
+            data = response.docs.map(item => {
               return {...item.data(), id: item.id}
             })
-            resolve(object)
+            resolve(data)
         })
       })
     }
-    return object
+    return data
   }
+  //Give all data from table. Return array with objects of data
   const getDataById = async (userId) => {
-    let object = []
+    let data = []
     const conditionalQuery = query(dbConf, where("userId", "==", userId))
     if(table == "users") {
       console.log("This table is unsupported by this method!!!")
@@ -95,17 +94,18 @@ const databaseProcessor = (table) => {
       let dataReceiver = () => {
         return new Promise(resolve => {
           onSnapshot(conditionalQuery, { includeMetadataChanges: true },  response => {
-              object = response.docs.map(item => {
+              data = response.docs.map(item => {
                 return {...item.data(), id: item.id}
               })
-              resolve(object)
+              resolve(data)
           })
         })
       }
-      object = [...(await dataReceiver())]
+      data = [...(await dataReceiver())]
     }
-    return object
+    return data
   }
+  //Give data by user ID. Return array with objects of data
   return {
     add: addData,
     remove: removeData,

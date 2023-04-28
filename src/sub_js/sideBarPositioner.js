@@ -10,4 +10,5 @@ const sideBarPositioner = () => {
     sideBarChanger()
     window.addEventListener("scroll", () => {sideBarChanger()})
 }
+// moving side bar depending on scrolling
 export default sideBarPositioner;

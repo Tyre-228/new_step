@@ -10,6 +10,7 @@ import noteSubmitProcessor from "./sub_js/noteSubmitProcessor.js";
 import { currentDataSetter } from "./sub_js/accountPageProcessor.js";
 import changeAccountProcessor from "./sub_js/changeAccountProcessor.js";
 import removeNoteProcessor from "./sub_js/removeNoteProcessor.js";
+// importing all modules
 
 const onloadFunction = async () => {
     let wrapperElem = document.querySelector(".wrapper")
@@ -40,6 +41,7 @@ const onloadFunction = async () => {
         await preloaderProcessor("end")
     }
 }
+// loading of preloader and authorization if necessary
 
 const postAuthorizationLoader = async () => {
     let wrapperElem = document.querySelector(".wrapper")
@@ -62,7 +64,7 @@ const postAuthorizationLoader = async () => {
 
     await preloaderProcessor("end")
 }
-
+// Loading all modules after authorization
 window.onload = () => {
     onloadFunction()
 }

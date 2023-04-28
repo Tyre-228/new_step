@@ -25,5 +25,6 @@ const uniquenessChecker = async (table, data, datatype) => {
     }
     return {unique}
 }
+//Receive DB table, data and datatype(name, password). Check for uniqueness in database and return unique method(true, false)
 
 export default uniquenessChecker

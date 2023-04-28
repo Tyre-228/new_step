@@ -17,6 +17,7 @@ const pageChangeProcessor = () => {
             windowSwitcher(switchElem.getAttribute("switchelem"))
         }
     }
+    //Change page
     const eventListenerSetter = () => {
         footer.addEventListener("click", event => {
             if(event.target.closest("li")) {
@@ -26,6 +27,7 @@ const pageChangeProcessor = () => {
             }
         })
     }
+    //Set event listener for side bar
 
     return {
         setEventListener: eventListenerSetter,
@@ -41,6 +43,7 @@ const windowSwitcher = (page) => {
             elem.style.display = "none"
         })
     }
+    //Clean windows
     const switcher = (switchTarget) => {
         let windowList = document.querySelectorAll("#page")
         windowList.forEach(element => {
@@ -51,6 +54,7 @@ const windowSwitcher = (page) => {
             }
         })
     }
+    //Switch windows
 
     windowCleaner()
     if(page) {

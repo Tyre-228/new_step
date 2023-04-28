@@ -8,7 +8,9 @@ const autorizationProcessor = () => {
     let authorizationElem = document.querySelector(".authorization")
     let goToSignUpElem = document.querySelector("#go-to-sign-up")
     let goToSignInElem = document.querySelector("#go-to-sign-in")
+
     authorizationElem.removeAttribute("style")
+    //Show authorization form
     
     const changeAutorizationType = (changeTo) => {
         errorCleaner(".sign-up form")
@@ -20,6 +22,7 @@ const autorizationProcessor = () => {
         }
         selectedElem.style.display = "block"
     }
+    //Switch sign in/up
     const dataValidation = async (data, dataType) => {
         let sucess = false
         let error = document.createElement("div")
@@ -87,6 +90,7 @@ const autorizationProcessor = () => {
             error,
         }
     }
+    //Check nickname/password for errors 
     const idSetter = async (nickname, password) => {
         let userData = await databaseProcessor("users").get()
         for(let i = 0;i < userData.length;i++) {
@@ -95,6 +99,7 @@ const autorizationProcessor = () => {
             }
         }
     }
+    //Return id from DB according to nickname and password
     const passwordAppropriationChecker = async (password, nickname) => {
         const userData = await databaseProcessor("users").get()
         for(let i = 0;i < userData.length;i++) {
@@ -107,6 +112,7 @@ const autorizationProcessor = () => {
             }
         }
     }
+
     const formCleaner = () => {
         let signInForm = document.querySelector(".sign-in__form")
         let signUpForm = document.querySelector(".sign-up__form")
@@ -117,6 +123,7 @@ const autorizationProcessor = () => {
 
         inputs.forEach(elem => elem.value = ``)
     }
+    //Clean all inputs in authorization forms(Both sign in, sign up)
     const eventListenerSetter = () => {
         let createAccountButton = document.querySelector(".sign-up__submit")
         let createNicknameInput = document.querySelector(".sign-up__insert-name")
@@ -157,6 +164,7 @@ const autorizationProcessor = () => {
                                 console.log(error)
                                 createAccountButton.after(errorCreator("Something went wrong").error)
                             }
+                            //Submitting after all checks
                         } else {
                             createPasswordInput.after(errorCreator("This password do already exist").error)
                         }
@@ -166,6 +174,7 @@ const autorizationProcessor = () => {
                 }
             }
         }
+        //Listener to sign up form submitter
         if(enterAccountButton.style.display != "none") {
 
             enterAccountButton.onclick = async event => {
@@ -194,6 +203,7 @@ const autorizationProcessor = () => {
                                 console.log(error)
                                 enterAccountButton.after(errorCreator("Something went wrong, reload the page").error)
                             }
+                            //Submitting after all checks
                         } else {
                             enterPasswordInput.after(errorCreator("This password is not correct").error)
                         }
@@ -203,6 +213,7 @@ const autorizationProcessor = () => {
                 }
             }
         }
+        //Listener to sign in form submitter
     }
 
     changeAutorizationType("sign-in")
