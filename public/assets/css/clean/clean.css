@@ -1,0 +1,108 @@
+*:not(html) {
+  margin: 0px;
+  padding: 0px;
+  color: black;
+  border: none;
+  font-style: normal;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  box-sizing: border-box;
+  font-size: calc(0.5rem + 2vw);
+}
+
+*::before, *::after {
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  font-size: calc(2rem + 10vw);
+}
+
+h1, h2, h3 {
+  color: #283337;
+  font-size: calc(2rem + 2vw);
+  font-weight: 900;
+}
+
+p {
+  font-style: normal;
+  font-weight: 400;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+ul[class], ol[class], li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+input, button, textarea, select {
+  border: none;
+  box-shadow: none;
+  outline: none;
+  background: transparent;
+  border-radius: 0px;
+}
+
+input:focus, button:focus, textarea:focus, select:focus {
+  border: none;
+  box-shadow: none;
+}
+
+input {
+  border-bottom: 2px solid gray;
+  padding: 0px 0px 6px 6px;
+  transition: 300ms all;
+  opacity: 1;
+}
+input:focus + input:not([type=file]) {
+  border-bottom: 2px solid black;
+  transition: 300ms all;
+}
+input:focus + input:not([type=file])::-moz-placeholder {
+  opacity: 0;
+  -moz-transition: 300ms all;
+  transition: 300ms all;
+}
+input:focus + input:not([type=file])::placeholder {
+  opacity: 0;
+  transition: 300ms all;
+}
+input[type=file] {
+  border-bottom: none;
+  padding: 0;
+}
+
+button {
+  background-color: black;
+  color: white;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: calc(0.5rem + 0.5vw);
+}
+
+label {
+  display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}/*# sourceMappingURL=clean.css.map */

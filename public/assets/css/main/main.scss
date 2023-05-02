@@ -1,0 +1,90 @@
+@import "../clean/clean.css";
+@import "../variables/variables.scss";
+
+
+.authentefication {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1000ms all;
+}
+// .authentefication#closed {
+//     transition: 1000ms all;
+//     display: none;
+//     opacity: 0;
+// }
+.authentefication__content {
+    max-width: 780px;
+    min-width: 250px;
+    width: 65%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    background-color: rgb(231, 231, 231);
+    border-radius: map-get($border-radius, 'standart');
+    padding: 1em;
+}
+.authentefication#closed > .authentefication__content {
+    animation-name: loginUp;
+    animation-duration: .5s;
+    animation-delay: .5s;
+    animation-timing-function: linear;
+}
+.autentefication__title {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+}
+.authentefication__form {
+    display: flex;
+    flex-direction: column;
+}
+.authentefication__input {
+    &:not(:last-child) {
+        margin-bottom: 1.5rem;
+    }
+}
+
+
+
+@keyframes loginUp {
+    0% {
+        top: 0px;
+    }
+    100% {
+        top: -200vh;
+    }
+}
+//---Authentefication--------------------------------------------------------------------
+.wrapper {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4vh 4vw;
+    & > section {
+        max-width: 1200px;
+    }
+}
+.add-book {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.add-book__title {
+    margin-bottom: calc(2rem + 2vw);
+}
+.add-book__form {
+    display: flex;
+    flex-direction: column;
+}
+.add-book__input {
+    &:not(:last-child) {
+        margin-bottom: calc(1rem + .4vw);
+    }
+}
+.add-book__submit {
+}
