@@ -1,44 +1,3 @@
-const languageChanger = () => {
-    let eng = document.querySelector(".introdunction__language .ENG")
-    let ru = document.querySelector(".introdunction__language .RU")
-    const changeLanguage = (language) => {
-        if(language == "ENG" && eng.id != "current") {
-                eng.id = "current"
-                ru.id = ""
-                contentLanguageChanger("ENG")
-        }
-        if(language == "RU" && ru.id != "current") {
-            ru.id = "current"
-            eng.id = ""
-            contentLanguageChanger("RU")
-        }
-    }
-    eng.addEventListener("click", () => {
-        changeLanguage("ENG")
-    })
-    ru.addEventListener("click", () => {
-        changeLanguage("RU")
-    })
-}
-const contentLanguageChanger = (language) => {
-    if(language == "ENG") {
-        document.querySelectorAll("#ENG").forEach((elem) => {
-            elem.style.display = "block"
-        })
-        document.querySelectorAll("#RU").forEach((elem) => {
-            elem.style.display = "none"
-        })
-    }
-    if(language == "RU") {
-        document.querySelectorAll("#ENG").forEach((elem) => {
-            elem.style.display = "none"
-        })
-        document.querySelectorAll("#RU").forEach((elem) => {
-            elem.style.display = "block"
-        })
-    }
-}
-
 const navigationProcessor = () => {
     let optionsElem = document.querySelector(".header__options")
     let burgerMenuElem = document.querySelector(".burger-menu")
@@ -172,8 +131,6 @@ const burgerMenuProcessor = () => {
 
 
 const launchJS = () => {
-    languageChanger()
-    contentLanguageChanger("ENG")
     navigationProcessor().setEventListener()
     resizeProcessor()
 }
